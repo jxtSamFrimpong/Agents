@@ -65,11 +65,11 @@ spec:
   # future, but this restriction is currently in place today to ensure that Karpenter
   # avoids leaking managed instance profiles in your account.
   # Must specify one of "role" or "instanceProfile" for Karpenter to launch nodes
-  role: "${karpenterNodeRoleArn}" # replace with your cluster name
+  #role: "${karpenterNodeRoleArn}" # replace with your cluster name
 
   ## Optional, IAM instance profile to use for the node identity.
   ## Must specify one of "role" or "instanceProfile" for Karpenter to launch nodes
-  #instanceProfile: "${karpenterNodeInstanceProfileName}" # replace with your cluster name
+  instanceProfile: "${karpenterNodeInstanceProfileName}" # replace with your cluster name
 
   # Each term in the array of amiSelectorTerms is ORed together
   # Within a single term, all conditions are ANDed
@@ -85,8 +85,8 @@ spec:
     #- ssmParameter: my-custom-parameter # ssm parameter name or ARN
     # Select EKS optimized AL2023 AMIs with version `v20240703`. This term is mutually
     # exclusive and can't be specified with other terms.
-    - alias: al2023@v20240807
-    #- alias: al2023@latest
+    #- alias: al2023@v20240807
+    - alias: al2023@latest
 
   # # Optional, each term in the array of capacityReservationSelectorTerms is ORed together.
   # capacityReservationSelectorTerms:
@@ -110,7 +110,7 @@ spec:
   blockDeviceMappings:
     - deviceName: /dev/xvda
       ebs:
-        volumeSize: 15Gi
+        volumeSize: 20Gi
         volumeType: gp3
         iops: 10000
         encrypted: true

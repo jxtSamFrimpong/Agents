@@ -17,4 +17,8 @@ resource "helm_release" "karpenter_node_class" {
         resources = [local.node_class_config]
     })
   ]
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }

@@ -17,3 +17,7 @@ output "karpenter_sqs_name" {
 # output "karpenter_node_class_yaml_body" {
 #   value = local.node_class_config
 # }
+
+output "node_instance_profile_name" {
+  value = module.karpenter.instance_profile_name
+}

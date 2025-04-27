@@ -58,7 +58,7 @@ spec:
       requirements:
         - key: node.kubernetes.io/instance-type
           operator: In
-          values: ["t3.large", "t3.xlarge", "t3.2xlarge", "c5.xlarge"]
+          values: ["m6i.large", "m5.large", "m5n.large", "m5zn.large"]
         - key: "kubernetes.io/arch"
           operator: In
           values: ["amd64"]

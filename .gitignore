@@ -1,0 +1,14 @@
+.terraform
+.terraform*
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfvars.*
+*.tfplan
+*.tfplan.*
+*.tfplan.json
+kubectl
+*.pdf
